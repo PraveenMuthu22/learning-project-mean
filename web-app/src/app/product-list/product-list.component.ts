@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  products = [
+    {id: 1, name: "baseball bat"},
+    {id: 2, name: "cricket ball"},
+    {id: 3, name: "sports jacket"},
+    {id: 4, name: "Fishing rod"}
+  ];
 
   constructor() { }
 

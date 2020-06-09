@@ -13,6 +13,11 @@
 <body>
   hello world
   <p> {{title}} </p>
+  <app-product-list> </app-product-list>
   <script src="js/scripts.js"></script>
 </body>
+
+<button (click) = 'toggleImage()'> {{showImage ? 'Hide' : 'Show'}} </button>
+
+{{ price | currency:'GBP' : 'symbol' : '1.2-2'}}
 </html>
