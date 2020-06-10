@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ConvertToSpacesPipe } from './convert-to-spaces.pipe';
 import { ChildComponent } from './child/child.component';
 import { CurrencyUtilsService } from './common/currency-utils.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CurrencyUtilsService } from './common/currency-utils.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
