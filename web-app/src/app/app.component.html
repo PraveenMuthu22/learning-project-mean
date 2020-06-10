@@ -12,12 +12,8 @@
 
 <body>
   hello world
-  <p> {{title}} </p>
-  <app-product-list> </app-product-list>
+  
+  <app-child [parent]='name'> </app-child>
   <script src="js/scripts.js"></script>
 </body>
-
-<ul *ngFor='let person of filteredPeople'>
-  <li> {{person.name }} </li>
-</ul>
 </html>
