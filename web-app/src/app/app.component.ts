@@ -20,6 +20,5 @@ export class AppComponent {
       next: products => this.products = products,
       error: err => this.errorMessage = err
     });
-    console.log(this.products);
   }
 }
