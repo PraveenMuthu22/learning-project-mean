@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-app';
-  name = 'John';
+  childStatus = 'sleeping';
+
+  onNotify(newStatus): void {
+    this.childStatus = newStatus;
+  }
 }

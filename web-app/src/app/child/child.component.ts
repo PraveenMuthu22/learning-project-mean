@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,7 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
+  status = 'sleepy';
 
-  @Input() parent: string;
+  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
+  clicked(): void{
+    this.status = 'clicked!';
+    this.notify.emit(this.status);
+  }
 }

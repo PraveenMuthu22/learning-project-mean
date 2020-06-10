@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  hello world
   
-  <app-child [parent]='name'> </app-child>
+  <app-child (notify)='onNotify($event)'> </app-child>
+  Hello I'm parent. Child is {{childStatus}}
   <script src="js/scripts.js"></script>
 </body>
 </html>
