@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CurrencyUtilsService } from './common/currency-utils.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'web-app';
-  childStatus = 'sleeping';
+  value = 19.99;
+  constructor(private currencyService: CurrencyUtilsService) { }
 
-  onNotify(newStatus): void {
-    this.childStatus = newStatus;
+  test(): void{
+    this.value = this.currencyService.convertUSDtoLKR(this.value);
   }
 }

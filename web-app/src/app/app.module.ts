@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ConvertToSpacesPipe } from './convert-to-spaces.pipe';
 import { ChildComponent } from './child/child.component';
+import { CurrencyUtilsService } from './common/currency-utils.service';
 
 @NgModule({
   declarations: [
