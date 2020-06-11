@@ -11,14 +11,5 @@ import { IProduct } from './Interfaces/IProduct';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private productService: ProductsService){}
-  products: IProduct[];
-  errorMessage: string;
 
-  test1(): void {
-    this.productService.getAllProducts().subscribe({
-      next: products => this.products = products,
-      error: err => this.errorMessage = err
-    });
-  }
 }

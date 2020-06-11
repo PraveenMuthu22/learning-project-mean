@@ -1,25 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ConvertToSpacesPipe } from './convert-to-spaces.pipe';
 import { ChildComponent } from './child/child.component';
-import { CurrencyUtilsService } from './common/currency-utils.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ConvertToSpacesPipe,
-    ChildComponent
+    ChildComponent,
+    AccountComponent,
+    AboutComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'products', component: ProductListComponent },
+      {path: 'welcome', component: WelcomeComponent},
+      { path: 'accounts', component: AccountComponent },
+      {path: '', redirectTo: 'welcome', pathMatch: 'full'}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

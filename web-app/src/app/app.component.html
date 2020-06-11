@@ -12,11 +12,14 @@
 </head>
 
 <body>
-  <button (click)='test1()'>Test 1</button>
-  <ul *ngFor='let product of products'>
-    <li> {{product.name }} </li>
+  Root Component
+
+  <ul>
+    <li> <a [routerLink]= "['/products']"> Products </a>  </li>
+    <li> <a [routerLink]= "['/accounts']"> Accounts </a>  </li>
   </ul>
 
+  <router-outlet> </router-outlet>
   <script src="js/scripts.js"></script>
 </body>
 
