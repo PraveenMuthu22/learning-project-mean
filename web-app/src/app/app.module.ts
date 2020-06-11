@@ -10,6 +10,7 @@ import { AccountComponent } from './account/account.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ChildComponent,
     AccountComponent,
     AboutComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
+      { path: 'products/:id', component: ProductDetailsComponent },
       {path: 'welcome', component: WelcomeComponent},
       { path: 'accounts', component: AccountComponent },
       {path: '', redirectTo: 'welcome', pathMatch: 'full'}
